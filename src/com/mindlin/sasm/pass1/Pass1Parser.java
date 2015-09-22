@@ -60,6 +60,8 @@ public class Pass1Parser implements Function<List<String>, List<Pass1Instruction
 				String target = m.group("T");
 				String expr = m.group("Q");
 				if (((m=fncall.matcher(expr)).find())) {
+					String fnName = m.group("name");
+					String args = m.group("args");
 					
 				}
 				result.add(new Pass1Varset(target, expr));
